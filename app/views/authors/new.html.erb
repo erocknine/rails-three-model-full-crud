@@ -1,0 +1,10 @@
+<h1>Create Author</h1>
+<%= form_for @author do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><%= "Name #{@author.errors[:name].first}" if @author.errors.any? %><br>
+
+  <%= f.label :birth_year %>
+  <%= f.text_field :birth_year %><br><%= "Birth year #{@author.errors[:birth_year].first}" if @author.errors.any? %><br>
+
+  <%= f.submit 'Submit Author' %>
+<% end %>

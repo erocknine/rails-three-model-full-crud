@@ -1,0 +1,7 @@
+<h1>You want Authors? Well, ya got authors</h1>
+<%= link_to 'Create Author', new_author_path %>
+<ul>
+<% @authors.each do |a| %>
+  <li><%= link_to "#{a.name} b. #{a.birth_year}", author_path(a) %></li>
+<% end %>
+</ul>

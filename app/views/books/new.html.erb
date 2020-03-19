@@ -1,0 +1,10 @@
+<h1>Create Book</h1>
+<%= form_for @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><%= "Title #{@book.errors[:title]}" if @book.errors.any? %><br>
+
+  <%= f.label :page_count %>
+  <%= f.text_field :page_count %><%= @book.errors[:page_count] if @book.errors.any? %><br>
+
+  <%= f.submit 'Submit Book' %>
+<% end %>
